@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Tela Fofa</title>
+<style>
+    body {
+        background-color: #f2e1f7;
+        text-align: center;
+        padding-top: 50px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 100vh;
+        margin: 0;
+    }
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    .heart-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .heart {
+        width: 10vmin;
+        height: 10vmin;
+        background-color: rgb(255, 75, 105);
+        margin: 2vmin;
+        transform: rotate(45deg);
+        animation: float 2s ease-in-out infinite;
+    }
+    .heart:before,
+    .heart:after {
+        content: "";
+        width: 10vmin;
+        height: 10vmin;
+        border-radius: 50%;
+        background-color: rgb(255, 75, 105);
+        position: absolute;
+    }
+    .heart:before {
+        top: -5vmin;
+        left: 0;
+    }
+    .heart:after {
+        left: 5vmin;
+        top: 0;
+    }
+    h1{
+        color: rgb(1, 1, 112);
+    }
+</style>
+</head>
+<body>
+
+<h1>Você é incrivel!</h1>
+
+<div class="heart-container">
+    <div class="heart" style="animation-delay: 0s;"></div>
+    <div class="heart" style="animation-delay: 1s;"></div>
+    <div class="heart" style="animation-delay: 2s;"></div>
+    <div class="heart" style="animation-delay: 3s;"></div>
+    <div class="heart" style="animation-delay: 4s;"></div>
+</div>
+
+</body>
+</html>
